@@ -105,5 +105,21 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("should keep display unchanged when pressing = without prior operation")
+    void testEqualsKeyWithoutOperation() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(4);
+        calc.pressEqualsKey();
+
+        String expected = "4";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+    }
+
+
+
 }
 
