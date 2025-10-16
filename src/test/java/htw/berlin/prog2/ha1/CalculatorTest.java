@@ -119,6 +119,20 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("should display 1 after taking square root of one")
+    void testSquareRootOfOne() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(1);
+        calc.pressUnaryOperationKey("√");
+
+        String expected = "1";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+    }
+
 
 
 }
